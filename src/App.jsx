@@ -5,6 +5,7 @@ import StudySection from './components/StudySection';
 import TradingSection from './components/TradingSection';
 import PremiumResources from './components/PremiumResources';
 import WhyChooseUs from './components/WhyChooseUs';
+import GuaranteeSection from './components/GuaranteeSection';
 import BackgroundPattern from './components/BackgroundPattern';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
       
       {/* Why Choose Us Section */}
       <WhyChooseUs />
+      
+      {/* Guarantee Section */}
+      <GuaranteeSection />
     </div>
   );
 }
