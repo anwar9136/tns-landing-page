@@ -2,7 +2,7 @@ import React from 'react';
 
 const TradingSection = () => {
   return (
-    <section className="relative z-10 px-6 md:px-12 py-16 md:py-20 lg:py-24 bg-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <section className="relative z-10 px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20 lg:py-24 bg-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         {/* Left Side - Image */}
         <div className="relative w-full flex justify-center md:justify-start order-2 md:order-1">
@@ -16,9 +16,9 @@ const TradingSection = () => {
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="space-y-6 order-1 md:order-2">
+        <div className="space-y-4 sm:space-y-6 order-1 md:order-2 text-center md:text-left">
           {/* Main Headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
             Take the Road
             <br />
             <span className="whitespace-nowrap">Towards an Excellent</span>
@@ -27,12 +27,12 @@ const TradingSection = () => {
           </h2>
 
           {/* Sub-headline */}
-          <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
             As one of our students, you'll be a part of a learning community committed to excellence.
           </p>
 
           {/* Learn More Button */}
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-md text-base md:text-lg font-semibold transition-colors mt-4">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base md:text-lg font-semibold transition-colors mt-4 w-full sm:w-auto">
             Learn More
           </button>
         </div>

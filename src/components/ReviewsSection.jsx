@@ -62,15 +62,15 @@ const ReviewsSection = () => {
         </div>
 
         {/* Review Card Container */}
-        <div className="relative flex items-center justify-center px-12 md:px-16">
+        <div className="relative flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16">
           {/* Left Arrow */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md"
+            className="absolute left-0 sm:left-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md"
             aria-label="Previous review"
           >
             <svg
-              className="w-5 h-5 md:w-6 md:h-6 text-gray-700"
+              className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -80,26 +80,26 @@ const ReviewsSection = () => {
           </button>
 
           {/* Review Card */}
-          <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 md:p-12 pl-28 md:pl-36">
+          <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-12 pl-20 sm:pl-24 md:pl-28 lg:pl-36">
             {/* User Image - Inside Left */}
-            <div className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-10">
+            <div className="absolute left-3 sm:left-4 md:left-6 top-4 sm:top-1/2 sm:-translate-y-1/2 z-10">
               <img
                 src={currentReview.image}
                 alt={currentReview.author}
-                className="rounded-full w-20 h-20 md:w-28 md:h-28 object-cover border-4 border-white shadow-lg"
+                className="rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 object-cover border-4 border-white shadow-lg"
               />
             </div>
 
             {/* Review Content */}
-            <div className="ml-4 md:ml-6">
-              <p className="text-base sm:text-lg md:text-xl text-gray-800 font-medium mb-8 leading-relaxed">
+            <div className="ml-2 sm:ml-4 md:ml-6">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 font-medium mb-6 sm:mb-8 leading-relaxed">
                 {currentReview.quote}
               </p>
               <div className="flex flex-col">
-                <p className="font-bold text-lg md:text-xl text-gray-900 mb-1">
+                <p className="font-bold text-base sm:text-lg md:text-xl text-gray-900 mb-1">
                   {currentReview.author}
                 </p>
-                <p className="text-gray-500 text-sm md:text-base font-medium">
+                <p className="text-gray-500 text-xs sm:text-sm md:text-base font-medium">
                   {currentReview.designation}
                 </p>
               </div>
@@ -109,11 +109,11 @@ const ReviewsSection = () => {
           {/* Right Arrow */}
           <button
             onClick={goToNext}
-            className="absolute right-0 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md"
+            className="absolute right-0 sm:right-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md"
             aria-label="Next review"
           >
             <svg
-              className="w-5 h-5 md:w-6 md:h-6 text-gray-700"
+              className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

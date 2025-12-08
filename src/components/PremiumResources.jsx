@@ -53,31 +53,33 @@ const PremiumResources = () => {
   ];
 
   return (
-    <section className="relative z-10 px-6 md:px-12 py-16 md:py-20 lg:py-24 bg-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <section className="relative z-10 px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20 lg:py-24 bg-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-gray-900 mb-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-gray-900 mb-4 sm:mb-6">
             Premium Resources
           </h2>
-          <p className="text-gray-600 text-xl md:text-2xl lg:text-2xl max-w-7xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl max-w-7xl mx-auto px-2">
             <span className="whitespace-nowrap">We offer a wide range of learning resources to accommodate the needs of a large audience</span><br />
             seeking to learn trading in the financial markets.
           </p>
         </div>
 
         {/* Resource Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {resources.map((resource, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-2xl border-2 border-transparent hover:border-orange-500 transition-colors duration-300 p-8 flex flex-col items-center justify-center text-center cursor-pointer min-h-[240px]"
+              className="bg-white rounded-lg shadow-2xl border-2 border-transparent hover:border-orange-500 transition-colors duration-300 p-6 sm:p-8 flex flex-col items-center justify-center text-center cursor-pointer min-h-[200px] sm:min-h-[240px]"
               style={{ boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
             >
-              <div className="text-orange-500 mb-4">
-                {resource.icon}
+              <div className="text-orange-500 mb-3 sm:mb-4">
+                <div className="w-12 h-12 sm:w-16 sm:h-16">
+                  {resource.icon}
+                </div>
               </div>
-              <h3 className="text-gray-900 font-semibold text-xl md:text-2xl">
+              <h3 className="text-gray-900 font-semibold text-lg sm:text-xl md:text-2xl">
                 {resource.label}
               </h3>
             </div>
