@@ -6,6 +6,8 @@ import TradingSection from './components/TradingSection';
 import PremiumResources from './components/PremiumResources';
 import WhyChooseUs from './components/WhyChooseUs';
 import GuaranteeSection from './components/GuaranteeSection';
+import FeaturesSection from './components/FeaturesSection';
+import StatisticsSection from './components/StatisticsSection';
 import BackgroundPattern from './components/BackgroundPattern';
 
 function App() {
@@ -37,6 +39,12 @@ function App() {
       
       {/* Guarantee Section */}
       <GuaranteeSection />
+      
+      {/* Features Section */}
+      <FeaturesSection />
+      
+      {/* Statistics Section */}
+      <StatisticsSection />
     </div>
   );
 }

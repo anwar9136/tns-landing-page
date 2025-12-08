@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="relative z-10 px-6 md:px-12 py-6 flex items-center justify-between bg-[#0a1929]">
+    <header className="relative z-10 px-6 md:px-12 py-4 flex items-center justify-between bg-[#0a1929]">
       {/* Logo */}
       <div className="flex items-center">
         <span className="text-white text-xl font-bold leading-tight">TNS Services</span>
