@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className="relative z-10 bg-purple-600 py-10 sm:py-12 md:py-16 lg:py-20" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 flex flex-col items-center justify-center py-4">
@@ -15,9 +20,13 @@ const CTASection = () => {
         </p>
         
         {/* Call-to-Action Button */}
-        <button className="bg-white hover:bg-gray-50 text-black border-2 border-gray-800 px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base md:text-base font-bold uppercase tracking-wide transition-colors w-full sm:w-auto">
+        <Link 
+          to="/packages"
+          onClick={handleClick}
+          className="bg-white hover:bg-gray-50 text-black border-2 border-gray-800 px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base md:text-base font-bold uppercase tracking-wide transition-colors w-full sm:w-auto inline-block text-center"
+        >
           START LEARNING
-        </button>
+        </Link>
       </div>
     </section>
   );
