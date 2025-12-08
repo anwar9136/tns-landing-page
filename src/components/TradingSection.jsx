@@ -2,7 +2,7 @@ import React from 'react';
 
 const TradingSection = () => {
   return (
-    <section className="relative z-10 px-6 md:px-12 py-16 md:py-20 lg:py-24 bg-white">
+    <section className="relative z-10 px-6 md:px-12 py-16 md:py-20 lg:py-24 bg-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         {/* Left Side - Image */}
         <div className="relative w-full flex justify-center md:justify-start order-2 md:order-1">
@@ -18,10 +18,10 @@ const TradingSection = () => {
         {/* Right Side - Text Content */}
         <div className="space-y-6 order-1 md:order-2">
           {/* Main Headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight">
             Take the Road
             <br />
-            Towards an Excellent
+            <span className="whitespace-nowrap">Towards an Excellent</span>
             <br />
             Trading Career
           </h2>

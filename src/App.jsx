@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import StudySection from './components/StudySection';
 import TradingSection from './components/TradingSection';
 import PremiumResources from './components/PremiumResources';
+import WhyChooseUs from './components/WhyChooseUs';
 import BackgroundPattern from './components/BackgroundPattern';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
       
       {/* Premium Resources Section */}
       <PremiumResources />
+      
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
     </div>
   );
 }
