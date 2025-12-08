@@ -9,6 +9,8 @@ import GuaranteeSection from './components/GuaranteeSection';
 import FeaturesSection from './components/FeaturesSection';
 import ReviewsSection from './components/ReviewsSection';
 import StatisticsSection from './components/StatisticsSection';
+import CTASection from './components/CTASection';
+import Footer from './components/Footer';
 import BackgroundPattern from './components/BackgroundPattern';
 
 function App() {
@@ -44,11 +46,20 @@ function App() {
       {/* Features Section */}
       <FeaturesSection />
       
+      {/* Statistics Section */}
+      <StatisticsSection />
+      
       {/* Reviews Section */}
       <ReviewsSection />
       
-      {/* Statistics Section */}
-      <StatisticsSection />
+      {/* CTA Section */}
+      <CTASection />
+      
+      {/* White Spacer */}
+      <div className="bg-white py-8 md:py-12"></div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
