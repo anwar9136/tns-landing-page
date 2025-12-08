@@ -16,9 +16,9 @@ import BackgroundPattern from '../components/BackgroundPattern';
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden">
       {/* Dark Blue Background Section (Header + Hero) */}
-      <div className="bg-[#0a1929] relative overflow-hidden">
+      <div className="bg-[#0a1929] relative overflow-hidden w-full">
         {/* Background Wavy Pattern */}
         <BackgroundPattern />
         

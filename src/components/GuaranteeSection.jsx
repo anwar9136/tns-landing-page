@@ -17,12 +17,12 @@ const GuaranteeSection = () => {
       <div className="absolute inset-0 bg-[#0a1929] opacity-70"></div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center px-6 flex flex-col items-center justify-center py-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-3 tracking-tight leading-tight uppercase whitespace-nowrap">
+      <div className="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 flex flex-col items-center justify-center py-4">
+        <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-3 tracking-tight leading-tight uppercase md:whitespace-nowrap">
           14 DAYS MONEY BACK GUARANTEE
         </h2>
         <p 
-          className="text-base md:text-lg lg:text-xl font-normal uppercase tracking-wide whitespace-nowrap"
+          className="text-sm sm:text-base md:text-lg lg:text-xl font-normal uppercase tracking-wide md:whitespace-nowrap"
           style={{
             color: 'white',
             background: 'linear-gradient(to bottom, #ffffff, #f0f5ff)',

@@ -8,47 +8,47 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20 mb-12 md:mb-16">
           {/* Left Column - TNS Services */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+            <h3 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-6">
               TNS Services
             </h3>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               Receive industry-standard information and practices through courses designed and conducted by professional traders.
             </p>
           </div>
 
           {/* Middle Column - Useful Links */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+            <h3 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-6">
               Useful links
             </h3>
             <ul className="space-y-3 md:space-y-4">
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-base md:text-lg transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
                   Training Packages
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-base md:text-lg transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
                   Disclaimer
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-base md:text-lg transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
                   Terms and Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-base md:text-lg transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
                   Privacy policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-base md:text-lg transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
                   Refund & Cancellation Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-base md:text-lg transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
                   Contact
                 </a>
               </li>
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Right Column - Supported Payment Methods */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+            <h3 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-6">
               Supported Payment Methods
             </h3>
             <div className="mb-6">
@@ -67,7 +67,7 @@ const Footer = () => {
                 className="w-full max-w-md h-auto"
               />
             </div>
-            <p className="text-gray-600 text-base md:text-lg">
+            <p className="text-gray-600 text-sm md:text-base">
               Over 53+ Net Banking options available and almost every bank available
             </p>
           </div>
@@ -75,7 +75,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-300 pt-8 md:pt-10 text-center">
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="text-gray-600 text-sm md:text-base">
             Copyright © 2024 Royalitytechnology. All Rights Reserved
           </p>
         </div>

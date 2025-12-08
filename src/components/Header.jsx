@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative z-50 px-4 sm:px-6 md:px-12 py-4 flex items-center justify-between bg-[#0a1929]">
+      <header className="relative z-50 w-full max-w-full px-4 sm:px-6 md:px-12 py-4 flex items-center justify-between bg-[#0a1929]">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <span className="text-white text-lg sm:text-xl font-bold leading-tight">TNS Services</span>
@@ -115,7 +115,7 @@ const Header = () => {
 
       {/* Mobile Menu - Outside header to avoid overflow clipping */}
       {isMenuOpen && (
-        <div className="fixed top-[73px] left-0 right-0 bg-[#0a1929] border-t border-gray-700 lg:hidden z-[60] shadow-lg max-h-[calc(100vh-73px)] overflow-y-auto">
+        <div className="fixed top-[73px] left-0 right-0 w-full max-w-full bg-[#0a1929] border-t border-gray-700 lg:hidden z-[60] shadow-lg max-h-[calc(100vh-73px)] overflow-y-auto">
           <nav className="flex flex-col px-4 py-4 space-y-4">
             <Link 
               to="/" 
