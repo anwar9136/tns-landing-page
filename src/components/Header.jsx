@@ -1,21 +1,38 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className="relative z-10 px-6 md:px-12 py-4 flex items-center justify-between bg-[#0a1929]">
       {/* Logo */}
-      <div className="flex items-center">
+      <Link to="/" className="flex items-center">
         <span className="text-white text-xl font-bold leading-tight">TNS Services</span>
-      </div>
+      </Link>
 
       {/* Navigation Links */}
       <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-        <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
+        <Link 
+          to="/" 
+          className={`transition-colors text-sm font-medium ${
+            location.pathname === '/' 
+              ? 'text-blue-400' 
+              : 'text-white hover:text-blue-400'
+          }`}
+        >
           Home Page
-        </a>
-        <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
+        </Link>
+        <Link 
+          to="/about" 
+          className={`transition-colors text-sm font-medium ${
+            location.pathname === '/about' 
+              ? 'text-blue-400' 
+              : 'text-white hover:text-blue-400'
+          }`}
+        >
           About
-        </a>
+        </Link>
         <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
           Packages
         </a>
