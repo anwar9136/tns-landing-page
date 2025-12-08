@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Animated Decorative Elements */
+
+@keyframes floatRibbon {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, -15px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-10px, -25px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(15px, -10px) rotate(4deg);
+  }
+}
+
+@keyframes floatStar {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(15px, 20px) rotate(120deg) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 10px) rotate(240deg) scale(0.9);
+  }
+}
+
+@keyframes floatDot {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(30px, -40px) scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+@keyframes floatBrush {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(-20px, 25px) rotate(10deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(25px, 15px) rotate(-5deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(-15px, -20px) rotate(8deg);
+    opacity: 0.65;
+  }
+}
+
+.animated-ribbon {
+  animation: floatRibbon 8s ease-in-out infinite;
+}
+
+.animated-star {
+  animation: floatStar 10s ease-in-out infinite;
+}
+
+.animated-dot {
+  animation: floatDot 6s ease-in-out infinite;
+}
+
+.animated-brush {
+  animation: floatBrush 12s ease-in-out infinite;
+}
+
+/* Responsive adjustments for decorative elements */
+@media (max-width: 768px) {
+  .animated-ribbon,
+  .animated-star,
+  .animated-dot,
+  .animated-brush {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1929;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
