@@ -7,6 +7,7 @@ import PremiumResources from './components/PremiumResources';
 import WhyChooseUs from './components/WhyChooseUs';
 import GuaranteeSection from './components/GuaranteeSection';
 import FeaturesSection from './components/FeaturesSection';
+import ReviewsSection from './components/ReviewsSection';
 import StatisticsSection from './components/StatisticsSection';
 import BackgroundPattern from './components/BackgroundPattern';
 
@@ -42,6 +43,9 @@ function App() {
       
       {/* Features Section */}
       <FeaturesSection />
+      
+      {/* Reviews Section */}
+      <ReviewsSection />
       
       {/* Statistics Section */}
       <StatisticsSection />
