@@ -33,12 +33,26 @@ const Header = () => {
         >
           About
         </Link>
-        <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
+        <Link 
+          to="/packages" 
+          className={`transition-colors text-sm font-medium ${
+            location.pathname === '/packages' 
+              ? 'text-blue-400' 
+              : 'text-white hover:text-blue-400'
+          }`}
+        >
           Packages
-        </a>
-        <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
+        </Link>
+        <Link 
+          to="/faq" 
+          className={`transition-colors text-sm font-medium ${
+            location.pathname === '/faq' 
+              ? 'text-blue-400' 
+              : 'text-white hover:text-blue-400'
+          }`}
+        >
           FAQ
-        </a>
+        </Link>
         <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
           Contact
         </a>
@@ -48,12 +62,15 @@ const Header = () => {
       </nav>
 
       {/* Enroll Now Button */}
-      <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md flex items-center gap-2 transition-colors font-medium text-sm">
+      <Link 
+        to="/packages" 
+        className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md flex items-center gap-2 transition-colors font-medium text-sm"
+      >
         Enroll Now!
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
-      </button>
+      </Link>
     </header>
   );
 };
