@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <main className="relative z-10 px-4 sm:px-6 md:px-12 pt-6 sm:pt-8 md:pt-2 lg:pt-4 pb-8 sm:pb-12 md:pb-0">
+    <main className="relative z-10 px-4 sm:px-6 md:px-12 pt-6 sm:pt-8 md:pt-2 lg:pt-4 pb-0 sm:pb-12 md:pb-0">
       <div className="max-w-[95%] lg:max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-8 items-center">
         {/* Left Side - Text Content */}
         <div className="text-center md:text-left">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -23,19 +24,19 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3 md:space-y-4">
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
+                <Link to="/packages" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Training Packages
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
+                <Link to="/disclaimer" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Disclaimer
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
+                <Link to="/terms-and-conditions" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Terms and Conditions
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
@@ -43,14 +44,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
+                <Link to="/refund-cancellation-policy" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Refund & Cancellation Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
+                <Link to="/contact" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

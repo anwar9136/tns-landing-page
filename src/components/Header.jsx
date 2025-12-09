@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   const location = useLocation();
@@ -7,14 +8,18 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative z-50 w-full max-w-full px-4 sm:px-6 md:px-12 py-4 flex items-center justify-between bg-[#0a1929]">
-        {/* Logo */}
-        <Link to="/" className="flex items-center cursor-pointer">
-          <span className="text-white text-lg sm:text-xl font-bold leading-tight">TNS Services</span>
+      <header className="relative z-50 w-full max-w-full px-4 sm:px-6 md:px-12 py-4 flex items-center justify-end bg-[#0a1929]">
+        {/* Logo - Absolutely positioned, doesn't affect layout */}
+        <Link to="/" className="absolute left-4 sm:left-6 md:left-12 top-1/2 -translate-y-1/2 cursor-pointer z-10">
+          <img 
+            src={logo} 
+            alt="TNS Services Logo" 
+            className="h-28 sm:h-32 md:h-36 lg:h-44 xl:h-52 w-auto object-contain"
+          />
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+        {/* Desktop Navigation Links - Centered */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2">
           <Link 
             to="/" 
             className={`transition-colors text-sm font-medium cursor-pointer ${

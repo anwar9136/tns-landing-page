@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -12,6 +12,7 @@ const MyAccount = () => {
   });
   const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const [loginMessage, setLoginMessage] = useState({ type: '', text: '' });
 
   // Register form state
   const [registerData, setRegisterData] = useState({
@@ -19,12 +20,32 @@ const MyAccount = () => {
     password: ''
   });
   const [showRegisterPassword, setShowRegisterPassword] = useState(false);
+  const [registerMessage, setRegisterMessage] = useState({ type: '', text: '' });
+
+  // Load saved credentials if "Remember Me" was checked
+  useEffect(() => {
+    const savedUsername = localStorage.getItem('rememberedUsername');
+    const savedPassword = localStorage.getItem('rememberedPassword');
+    const savedRememberMe = localStorage.getItem('rememberMe') === 'true';
+
+    if (savedRememberMe && savedUsername && savedPassword) {
+      setLoginData({
+        username: savedUsername,
+        password: savedPassword
+      });
+      setRememberMe(true);
+    }
+  }, []);
 
   const handleLoginChange = (e) => {
     setLoginData({
       ...loginData,
       [e.target.name]: e.target.value
     });
+    // Clear message when user starts typing
+    if (loginMessage.text) {
+      setLoginMessage({ type: '', text: '' });
+    }
   };
 
   const handleRegisterChange = (e) => {
@@ -32,20 +53,108 @@ const MyAccount = () => {
       ...registerData,
       [e.target.name]: e.target.value
     });
+    // Clear message when user starts typing
+    if (registerMessage.text) {
+      setRegisterMessage({ type: '', text: '' });
+    }
   };
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log('Login submitted:', loginData, { rememberMe });
-    // Handle login logic here
-    alert('Login functionality will be implemented here.');
+    
+    // Get all registered users from localStorage
+    const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+    
+    // Find user by email or username
+    const user = registeredUsers.find(
+      (u) => (u.email === loginData.username || u.username === loginData.username) && 
+             u.password === loginData.password
+    );
+
+    if (user) {
+      // Login successful
+      setLoginMessage({ type: 'success', text: 'Login successful! Redirecting...' });
+      
+      // Store login status
+      const loginInfo = {
+        isLoggedIn: true,
+        email: user.email,
+        username: user.username || user.email,
+        loginTime: new Date().toISOString()
+      };
+
+      if (rememberMe) {
+        // Use localStorage for persistent storage
+        localStorage.setItem('userSession', JSON.stringify(loginInfo));
+        localStorage.setItem('rememberedUsername', loginData.username);
+        localStorage.setItem('rememberedPassword', loginData.password);
+        localStorage.setItem('rememberMe', 'true');
+      } else {
+        // Use sessionStorage for session-only storage
+        sessionStorage.setItem('userSession', JSON.stringify(loginInfo));
+        // Clear remembered credentials
+        localStorage.removeItem('rememberedUsername');
+        localStorage.removeItem('rememberedPassword');
+        localStorage.removeItem('rememberMe');
+      }
+
+      // Clear form
+      setLoginData({ username: '', password: '' });
+      setRememberMe(false);
+
+      // Simulate redirect (you can replace this with actual navigation)
+      setTimeout(() => {
+        setLoginMessage({ type: '', text: '' });
+        // You can add navigation here: navigate('/dashboard');
+      }, 2000);
+    } else {
+      // Login failed
+      setLoginMessage({ type: 'error', text: 'Invalid username/email or password. Please try again.' });
+    }
   };
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log('Register submitted:', registerData);
-    // Handle registration logic here
-    alert('Registration functionality will be implemented here.');
+    
+    // Get existing users from localStorage
+    const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+    
+    // Check if email already exists
+    const emailExists = registeredUsers.some((u) => u.email === registerData.email);
+    
+    if (emailExists) {
+      setRegisterMessage({ type: 'error', text: 'This email is already registered. Please login instead.' });
+      return;
+    }
+
+    // Validate password length
+    if (registerData.password.length < 6) {
+      setRegisterMessage({ type: 'error', text: 'Password must be at least 6 characters long.' });
+      return;
+    }
+
+    // Create new user object
+    const newUser = {
+      email: registerData.email,
+      password: registerData.password,
+      username: registerData.email.split('@')[0], // Use email prefix as username
+      registeredAt: new Date().toISOString()
+    };
+
+    // Add to registered users array
+    registeredUsers.push(newUser);
+    localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
+
+    // Registration successful
+    setRegisterMessage({ type: 'success', text: 'Registration successful! You can now login.' });
+    
+    // Clear form
+    setRegisterData({ email: '', password: '' });
+
+    // Clear message after 3 seconds
+    setTimeout(() => {
+      setRegisterMessage({ type: '', text: '' });
+    }, 3000);
   };
 
   return (
@@ -77,6 +186,18 @@ const MyAccount = () => {
               </h2>
               
               <div className="bg-gray-50 rounded-lg shadow-md p-6 md:p-8">
+                {/* Login Message */}
+                {loginMessage.text && (
+                  <div
+                    className={`mb-4 p-3 rounded-lg text-sm ${
+                      loginMessage.type === 'success'
+                        ? 'bg-green-100 text-green-700 border border-green-300'
+                        : 'bg-red-100 text-red-700 border border-red-300'
+                    }`}
+                  >
+                    {loginMessage.text}
+                  </div>
+                )}
                 <form onSubmit={handleLoginSubmit} className="space-y-6">
                   {/* Username or Email Field */}
                   <div>
@@ -163,6 +284,18 @@ const MyAccount = () => {
               </h2>
               
               <div className="bg-gray-50 rounded-lg shadow-md p-6 md:p-8">
+                {/* Register Message */}
+                {registerMessage.text && (
+                  <div
+                    className={`mb-4 p-3 rounded-lg text-sm ${
+                      registerMessage.type === 'success'
+                        ? 'bg-green-100 text-green-700 border border-green-300'
+                        : 'bg-red-100 text-red-700 border border-red-300'
+                    }`}
+                  >
+                    {registerMessage.text}
+                  </div>
+                )}
                 <form onSubmit={handleRegisterSubmit} className="space-y-6">
                   {/* Email Field */}
                   <div>
