@@ -6,7 +6,7 @@ const ReviewsSection = () => {
   const reviews = [
     {
       quote:
-        "Royality Technology's training packages have revolutionized my trading skills. The courses are well-structured and taught by experienced professionals. I now trade with confidence and have seen a significant improvement in my returns",
+        "TNS Services training packages have revolutionized my trading skills. The courses are well-structured and taught by experienced professionals. I now trade with confidence and have seen a significant improvement in my returns",
       author: "Anurag Yadav",
       designation: "Mumbai, Maharashtra",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
@@ -14,7 +14,7 @@ const ReviewsSection = () => {
     },
     {
       quote:
-        "Thanks to Royality Technology, I have gained a deep understanding of stocks, commodities, and indices trading. The instructors are knowledgeable and provide practical insights. I highly recommend their training packages.",
+        "Thanks to TNS Services, I have gained a deep understanding of stocks, commodities, and indices trading. The instructors are knowledgeable and provide practical insights. I highly recommend their training packages.",
       author: "Sakshi Bhise",
       designation: "Ahmedabad, Gujarat",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80",
@@ -22,7 +22,7 @@ const ReviewsSection = () => {
     },
     {
       quote:
-        "Royality Technology's training has been a game-changer for me. The courses are comprehensive, covering all aspects of trading. I feel equipped to make informed decisions and have started seeing profitable trades.",
+        "TNS Services training has been a game-changer for me. The courses are comprehensive, covering all aspects of trading. I feel equipped to make informed decisions and have started seeing profitable trades.",
       author: "Rahul Mehta",
       designation: "Kolkata, West Bengal",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",

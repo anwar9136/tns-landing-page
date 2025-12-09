@@ -76,7 +76,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-300 pt-8 md:pt-10 text-center">
           <p className="text-gray-600 text-sm md:text-base">
-            Copyright © 2024 Royalitytechnology. All Rights Reserved
+            Copyright © 2025 TNS Services. All Rights Reserved
           </p>
         </div>
       </div>

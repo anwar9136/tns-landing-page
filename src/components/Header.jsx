@@ -55,12 +55,26 @@ const Header = () => {
           >
             FAQ
           </Link>
-          <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
+          <Link 
+            to="/contact" 
+            className={`transition-colors text-sm font-medium ${
+              location.pathname === '/contact' 
+                ? 'text-blue-400' 
+                : 'text-white hover:text-blue-400'
+            }`}
+          >
             Contact
-          </a>
-          <a href="#" className="text-white hover:text-blue-400 transition-colors text-sm font-medium">
+          </Link>
+          <Link 
+            to="/my-account" 
+            className={`transition-colors text-sm font-medium ${
+              location.pathname === '/my-account' 
+                ? 'text-blue-400' 
+                : 'text-white hover:text-blue-400'
+            }`}
+          >
             My Account
-          </a>
+          </Link>
         </nav>
 
         {/* Desktop Enroll Now Button */}
@@ -161,12 +175,28 @@ const Header = () => {
             >
               FAQ
             </Link>
-            <a href="#" className="text-white hover:text-blue-400 hover:bg-gray-800 text-base font-medium py-2 px-4 rounded">
+            <Link 
+              to="/contact" 
+              onClick={() => setIsMenuOpen(false)}
+              className={`text-base font-medium py-2 px-4 rounded ${
+                location.pathname === '/contact' 
+                  ? 'text-blue-400 bg-blue-900/20' 
+                  : 'text-white hover:text-blue-400 hover:bg-gray-800'
+              }`}
+            >
               Contact
-            </a>
-            <a href="#" className="text-white hover:text-blue-400 hover:bg-gray-800 text-base font-medium py-2 px-4 rounded">
+            </Link>
+            <Link 
+              to="/my-account" 
+              onClick={() => setIsMenuOpen(false)}
+              className={`text-base font-medium py-2 px-4 rounded ${
+                location.pathname === '/my-account' 
+                  ? 'text-blue-400 bg-blue-900/20' 
+                  : 'text-white hover:text-blue-400 hover:bg-gray-800'
+              }`}
+            >
               My Account
-            </a>
+            </Link>
             <Link 
               to="/packages" 
               onClick={() => setIsMenuOpen(false)}
