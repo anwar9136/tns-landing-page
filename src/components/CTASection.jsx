@@ -23,7 +23,7 @@ const CTASection = () => {
         <Link 
           to="/packages"
           onClick={handleClick}
-          className="bg-white hover:bg-gray-50 text-black border-2 border-gray-800 px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base md:text-base font-bold uppercase tracking-wide transition-colors w-full sm:w-auto inline-block text-center"
+          className="bg-white hover:bg-gray-50 text-black border-2 border-gray-800 px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base md:text-base font-bold uppercase tracking-wide transition-colors w-full sm:w-auto inline-block text-center cursor-pointer"
         >
           START LEARNING
         </Link>

@@ -66,7 +66,7 @@ const ReviewsSection = () => {
           {/* Left Arrow */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 sm:left-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md"
+            className="absolute left-0 sm:left-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md cursor-pointer"
             aria-label="Previous review"
           >
             <svg
@@ -109,7 +109,7 @@ const ReviewsSection = () => {
           {/* Right Arrow */}
           <button
             onClick={goToNext}
-            className="absolute right-0 sm:right-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md"
+            className="absolute right-0 sm:right-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md cursor-pointer"
             aria-label="Next review"
           >
             <svg
@@ -129,7 +129,7 @@ const ReviewsSection = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 index === currentIndex
                   ? "bg-blue-600 w-8"
                   : "bg-gray-300 hover:bg-gray-400"

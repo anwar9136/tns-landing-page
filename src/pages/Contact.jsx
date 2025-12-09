@@ -115,7 +115,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-base transition-colors duration-300"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-base transition-colors duration-300 cursor-pointer"
                 >
                   Send your message
                 </button>
@@ -159,7 +159,7 @@ const Contact = () => {
                       </h3>
                       <a 
                         href="mailto:info@royalitytechnology.com" 
-                        className="text-blue-600 hover:text-blue-700 text-sm md:text-base transition-colors"
+                        className="text-blue-600 hover:text-blue-700 text-sm md:text-base transition-colors cursor-pointer"
                       >
                         email.com
                       </a>
@@ -181,7 +181,7 @@ const Contact = () => {
                       </h3>
                       <a 
                         href="tel:9205394086" 
-                        className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors"
+                        className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer"
                       >
                         999999999
                       </a>

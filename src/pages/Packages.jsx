@@ -296,7 +296,7 @@ const Packages = () => {
                 
                 {/* Get Started Button */}
                 <button
-                  className="w-full rounded-[10px] text-white font-semibold transition-colors duration-300"
+                  className="w-full rounded-[10px] text-white font-semibold transition-colors duration-300 cursor-pointer"
                   style={{
                     background: 'linear-gradient(90deg, #006CFF, #00A8FF)',
                     fontWeight: 600,
@@ -419,7 +419,7 @@ const Packages = () => {
                 
                 {/* Get Started Button */}
                 <button
-                  className="w-full rounded-[10px] text-white font-semibold transition-colors duration-300"
+                  className="w-full rounded-[10px] text-white font-semibold transition-colors duration-300 cursor-pointer"
                   style={{
                     background: 'linear-gradient(90deg, #006CFF, #00A8FF)',
                     fontWeight: 600,
@@ -542,7 +542,7 @@ const Packages = () => {
                 
                 {/* Get Started Button */}
                 <button
-                  className="w-full rounded-[10px] text-white font-semibold transition-colors duration-300"
+                  className="w-full rounded-[10px] text-white font-semibold transition-colors duration-300 cursor-pointer"
                   style={{
                     background: 'linear-gradient(90deg, #006CFF, #00A8FF)',
                     fontWeight: 600,

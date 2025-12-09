@@ -112,7 +112,7 @@ const MyAccount = () => {
                       <button
                         type="button"
                         onClick={() => setShowLoginPassword(!showLoginPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none cursor-pointer"
                         aria-label={showLoginPassword ? 'Hide password' : 'Show password'}
                       >
                         {showLoginPassword ? (
@@ -140,7 +140,7 @@ const MyAccount = () => {
                       />
                       <span className="ml-2 text-sm text-gray-700">Remember me</span>
                     </label>
-                    <a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                    <a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
                       Lost your password?
                     </a>
                   </div>
@@ -148,7 +148,7 @@ const MyAccount = () => {
                   {/* Login Button */}
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-base transition-colors duration-300"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-base transition-colors duration-300 cursor-pointer"
                   >
                     Login
                   </button>
@@ -198,7 +198,7 @@ const MyAccount = () => {
                       <button
                         type="button"
                         onClick={() => setShowRegisterPassword(!showRegisterPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none cursor-pointer"
                         aria-label={showRegisterPassword ? 'Hide password' : 'Show password'}
                       >
                         {showRegisterPassword ? (
@@ -217,16 +217,13 @@ const MyAccount = () => {
                   
                   {/* Privacy Policy Text */}
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our{' '}
-                    <a href="https://www.royalitytechnology.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">
-                      privacy policy
-                    </a>.
+                    Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes.
                   </p>
                   
                   {/* Register Button */}
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-base transition-colors duration-300"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-base transition-colors duration-300 cursor-pointer"
                   >
                     Register
                   </button>

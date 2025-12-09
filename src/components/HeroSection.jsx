@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -24,9 +25,12 @@ const HeroSection = () => {
           </p>
 
           {/* Explore Courses Button */}
-          <button className="bg-blue-400 hover:bg-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base md:text-lg font-semibold transition-colors mt-2 sm:mt-4 w-full sm:w-auto">
+          <Link 
+            to="/packages"
+            className="inline-block bg-blue-400 hover:bg-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base md:text-lg font-semibold transition-colors mt-2 sm:mt-4 w-full sm:w-auto text-center cursor-pointer"
+          >
             Explore Courses
-          </button>
+          </Link>
         </div>
 
         {/* Right Side - Image */}

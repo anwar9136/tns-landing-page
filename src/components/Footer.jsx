@@ -23,32 +23,32 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3 md:space-y-4">
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Training Packages
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Disclaimer
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Terms and Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Privacy policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Refund & Cancellation Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors cursor-pointer">
                   Contact
                 </a>
               </li>
